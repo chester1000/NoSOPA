@@ -4,14 +4,13 @@ if (!document.getElementById('stopSOPA')) {
                 + "This company may be a supporter of the dangerous SOPA or PIPA legislation."
                 + "<div style='color:#fff;font-weight:bold;float:right;padding-right:8px;width:46px;'>"
                 + "<a target='_blank' style='color:#fff;font-weight:normal;font-size:0.8em;padding-right:4px;' href='http://www.reddit.com/help/faqs/sopa'>?</a> "
-                + "<span id='stopSOPAClose' style='cursor:pointer;'>&times;</div>"                
+                + "<span id='stopSOPAClose' style='cursor:pointer;'>&times;</div>"
                 + "</div></div>";
     document.body.innerHTML = content + document.body.innerHTML;
     var close = document.getElementById('stopSOPAClose');
-    
+
     close.addEventListener('click',function() {
         document.getElementById('stopSOPA').style.display = 'none';
-    
     });
 } else {
     document.getElementById('stopSOPA').style.display = 'block';

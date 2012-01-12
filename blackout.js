@@ -9,10 +9,10 @@ if (!document.getElementById('SOPABlackout')) {
                 + "</div>";
     document.body.innerHTML = content + document.body.innerHTML;
     var close = document.getElementById('SOPABlackoutClose');
-    
+
     close.addEventListener('click',function() {
         document.getElementById('SOPABlackout').style.display = 'none';
-    
+
     });
 } else {
     document.getElementById('SOPABlackout').style.display = 'block';
