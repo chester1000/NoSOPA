@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>No SOPA Options</title>
+    </head>
+    <script type="text/javascript">
+        function save_options() {
+
+            // Save option to local storage
+            localStorage["boycott_mode"]=document.getElementById("boycott_mode").checked;
+
+            // Update status to let user know options were saved.
+            var status = document.getElementById("status");
+            status.innerHTML="[saving...]";
+            setTimeout(function(){status.innerHTML="";},750);
+        }
+
+        function restore_options() {
+            document.getElementById("boycott_mode").checked=(localStorage["boycott_mode"]==="false")?false:true
+        }
+
+    </script>
+
+    <body onload="restore_options()">
+
+        <div style="width: 300px;">
+            <input type="checkbox" id="boycott_mode" onchange="save_options()" />
+            <label for="boycott_mode">Boycott Mode! <span id="status" style="font-size: 80%;"></span></label>
+            <p style="margin: 3px 0 0 22px; font-size: 85%">When enabled replaces entire page content with example SOPA block screen instead of showing only informative bar at the top of a page.</p>
+        </div>
+
+    </body>
+</html>
