@@ -1,7 +1,7 @@
 if (!document.getElementById('SOPABlackout')) {
     var content = "<div id='SOPABlackout' style='"
                     + "background: #000; top: 0; bottom:0; left:0;right:0;text-align: center;"
-                    + "z-index: 99999; font-size: 28px; line-height: 1.5;padding-top:400px;"
+                    + "z-index: 99999; font-size: 28px; line-height: 1.5;padding: 400px 0 1000px 0;"
                     + "color: #fff; font-family: Helvetica, Arial;"
                 + "'>"
                 + "<span style='font-weight: bold;'>SOPA BLACK OUT</span>"
@@ -12,7 +12,6 @@ if (!document.getElementById('SOPABlackout')) {
 
     close.addEventListener('click',function() {
         document.getElementById('SOPABlackout').style.display = 'none';
-
     });
 } else {
     document.getElementById('SOPABlackout').style.display = 'block';
