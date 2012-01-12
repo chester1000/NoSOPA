@@ -19,7 +19,6 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     var host = getDomain(tab);
     if (domains.indexOf(host) !== -1) {
         if (!isIgnored(host)) {
-            console.log(localStorage['boycott_mode']);
             if(typeof localStorage['boycott_mode'] === "undefined" || localStorage['boycott_mode'] == "false") {
                 chrome.tabs.executeScript(tabId, { file: 'sopa.js' });
                 chrome.pageAction.setIcon({ tabId: tabId, path: 'icon.png' });
